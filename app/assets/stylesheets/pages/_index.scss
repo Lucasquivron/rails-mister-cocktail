@@ -1,0 +1,71 @@
+@import "home";
+
+
+
+.banner {
+  color: white;
+  text-align: center;
+  height: 100vh;
+  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  background-size: cover !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.banner h1 {
+  font-size: 50px;
+  font-weight: bold;
+  text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+}
+.banner p {
+  font-size: 20px;
+  font-weight: lighter;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 20px;
+}
+
+
+body {
+padding-top: 70px;
+text-align: center;
+}
+
+.title {
+padding-top: 20px;
+padding-right: 20px;
+padding-left: 20px;
+padding-bottom: 0px;
+}
+
+.title h1 {
+  font-family: "Open Sans";
+  font-size: 36px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+  line-height: 26.4px;
+  margin-bottom: 3px;
+}
+
+.list h2 {
+  font-family: "Open Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+  line-height: 15.4px;
+
+}
+
+.title h3 {
+  font-family: "Open Sans";
+  font-size: 12px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+  line-height: 15.4px;
+  margin-top: 0px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 0px;
+}
