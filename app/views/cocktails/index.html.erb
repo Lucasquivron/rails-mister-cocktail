@@ -3,30 +3,33 @@
 
 
 <div class="banner" style="background: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://hd.unsplash.com/photo-1453825012366-3738046cb6c7');">
-       <div class="title_index">
-         <h1>MOLOTOV COCKTAIL</h1>
-         <h3>- The Place to be for Cocktails lovers -</h3>
-         <br>
-           <%= link_to "New Cocktail", "/cocktails/new", :class => "btn btn-success" %>
-          </div>
+ <div class="title_index">
+   <h1>MOLOTOV COCKTAIL</h1>
+   <h3>- The Place to be for Cocktails lover -</h3>
+   <br>
+   <%= link_to "Submit your Cocktail", "/cocktails/new", :class => "btn btn-success" %>
+ </div>
 
 </div>
 
 
 <div class="container">
-  <div class="row">
 
-      <%  @cocktails.each do |cocktail| %>
-      <div class="col-xs-12 col-sm-4">
-        <div class="cocktail_card_2 title">
-          <h3><%= cocktail.name.upcase %></h3>
-          <br>
-          <%= link_to "View More", "/cocktails/#{cocktail.id}", :class => "btn btn-success" %>
-        </div>
-       </div>
-      <% end %>
-
+  <div class="row title">
+    <h1>THIS WEEK COCKTAILS</h1>
+    <h3>- Our special selection for this week -</h3>
+    <%  @cocktails.each do |cocktail| %>
+    <div class="col-xs-12 col-sm-4">
+      <div class="cocktail_card_2 ">
+        <% if cocktail.photo %>
+        <%= cl_image_tag cocktail.photo, height: 150, width: 125, crop: :fill %>
+        <% end %>
+        <h3><%= cocktail.name.upcase %></h3>
+        <br>
+        <%= link_to "View More", "/cocktails/#{cocktail.id}", :class => "btn btn-success" %>
+      </div>
+    </div>
+    <% end %>
   </div>
 </div>
-
 

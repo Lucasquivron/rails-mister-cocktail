@@ -23,6 +23,7 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 30px;
 }
 
 
@@ -58,6 +59,7 @@ padding-left: 20px;
 
 
 .padded {
+padding-top: 20px;
 padding-bottom: 0px;
 }
 
@@ -164,7 +166,8 @@ color: #303030;
 #footer {
   background: #333333;
   padding: 30px 0;
-  color: #CCCCCC; }
+  color: #CCCCCC;
+  margin-top: 30px }
   /* line 5, /Users/lucas/code/lucasquivron/airbnb-static/source/stylesheets/layout/_footer.css.scss */
   #footer p {
     margin-top: 17px; }
@@ -202,3 +205,51 @@ color: #303030;
 .social {
   padding-top: 100%;
 }
+
+#new_cocktail .cocktail_photo > label {
+  display:none;
+}
+
+.card {
+  height: 500px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  background-size: cover !important;
+  color: white;
+  position: relative;
+}
+.card-user {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+.card-category {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+.card-description {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+.card-description h2 {
+  font-size: 24px;
+}
+.card-description p {
+  font-size: 13px;
+  }
+.card-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  z-index:2;
+  background: black;
+  opacity: 0;
+}
+.card-link:hover{
+  opacity: 0.1;
+}
+

@@ -5,21 +5,29 @@
 <div class="title padded">
 <a href="/cocktails" width="42""> <img src="http://image.flaticon.com/icons/png/64/175/175779.png"> </a>
          <h1>MOLOTOV COCKTAIL</h1>
-         <h3>- The Place to be for Cocktails lovers -</h3>
+         <h3>- The Place to be for Cocktails lover -</h3>
          <br>
 </div>
 
-<div class="text-center padded title">
+
+<div class="container">
+  <div class="row">
+
+    <div class="col-xs-12 col-sm-4 col-sm-offset-4 text-center padded title cocktail_card_2 ">
 
   <h2>CREATE A COCKTAIL</h2>
   <br>
-  <%= form_for(@cocktail) do |f| %>
+  <%= simple_form_for(@cocktail) do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name  %>
   <%= f.submit :class => "btn btn-success" %>
+  <%= f.input :photo, input_html:{class: 'text-center'} %>
+  <%= f.input :photo_cache, as: :hidden %>
   <%= link_to "Cancel", "/cocktails", :class => "btn btn-danger" %>
   <% end %>
 
+    </div>
+  </div>
 </div>
 
 
