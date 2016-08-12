@@ -1,52 +1,34 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
-<%= link_to "Back to Cocktail Index", "/cocktails", :class => "btn btn-success" %>
+
+<div class="title padded">
+<a href="/cocktails" width="42""> <img src="http://image.flaticon.com/icons/png/64/175/175779.png"> </a>
+         <h1>MOLOTOV COCKTAIL</h1>
+         <h3>- The Place to be for Cocktails lovers -</h3>
+         <br>
+</div>
 
 
-<div class="text-center padded">
-
-  <h1>Yolo Cocktail</h1>
-  <h2>-The place to be for cocktails lovers-</h2><br><br>
-
-  <div class="row">
-    <div class=" col-sm-4"></div>
+<div class="row padded">
+  <div class=" col-sm-4"></div>
     <div class="col-sm-4 text-center">
-      <br><div class="card">
-      <h2><%= @cocktail.name %></h2>
-      <%= link_to "Edit", "/cocktails/#{@cocktail.id}/doses/new", :class => "btn btn-warning" %>
-      <%= link_to "Delete", "/cocktails/#{@cocktail.id}", method: :delete, data: { confirm: "Are you sure?" }, :class => "btn btn-danger" %>
+      <div class="cocktail_card title">
 
+
+      <h2><%= @cocktail.name.upcase %></h2>
       <h3>Ingredients & Doses</h3>
-      <div class="row">
-        <div class=" col-sm-4"></div>
-        <div class="col-sm-4 text-center">
-          <ul>
+        <ul>
           <% @cocktail.doses.each do |dose| %>
             <li><%=dose.description %> of <%= Ingredient.find(dose.ingredient_id).name %></li>
           <%end%>
-          </ul>
+        </ul>
+
       </div>
-    </div>
+    <br>
+    <%= link_to "Add Doses", "/cocktails/#{@cocktail.id}/doses/new", :class => "btn btn-primary" %>
+    <%= link_to "Delete", "/cocktails/#{@cocktail.id}", method: :delete, data: { confirm: "Are you sure?" }, :class => "btn btn-danger" %>
   </div>
-</div>
 </div>
 
-<br><br><br>
-<div id="footer">
- <div class="container">
-        <div class="row">
-          <div class="col-xs-4">
-            <ul class="list-inline">
-              <li><%= link_to "", "", class:"fa fa-youtube" %></li>
-              <li><%= link_to "", "", class:"fa fa-instagram" %></li>
-              <li><%= link_to "", "", class:"fa fa-facebook" %></li>
-              <li><%= link_to "", "", class:"fa fa-twitter" %></li>
-            </ul>
-          </div>
-          <div class="col-xs-8 text-right">
-            <p>This is Cocktail challenge  made in @LeWagon</p>
-          </div>
-        </div>
-      </div>
-  </div>
+

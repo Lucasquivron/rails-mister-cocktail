@@ -2,15 +2,26 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
 
-<div class="text-center padded">
-<h1>Create a Cocktail</h1>
-
-<%= form_for(@cocktail) do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <%= f.submit %>
-<% end %>
-
-<br><br>
-<%= link_to "Menu", "/cocktails", :class => "btn btn-success" %>
+<div class="title padded">
+<a href="/cocktails" width="42""> <img src="http://image.flaticon.com/icons/png/64/175/175779.png"> </a>
+         <h1>MOLOTOV COCKTAIL</h1>
+         <h3>- The Place to be for Cocktails lovers -</h3>
+         <br>
 </div>
+
+<div class="text-center padded title">
+
+  <h2>CREATE A COCKTAIL</h2>
+  <br>
+  <%= form_for(@cocktail) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name  %>
+  <%= f.submit :class => "btn btn-success" %>
+  <%= link_to "Cancel", "/cocktails", :class => "btn btn-danger" %>
+  <% end %>
+
+</div>
+
+
+
+
